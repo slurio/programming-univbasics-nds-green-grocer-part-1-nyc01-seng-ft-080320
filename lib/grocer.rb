@@ -29,7 +29,7 @@ def consolidate_cart(cart)
       else
         cons_cart.each do |organzied_item_info|
           if organzied_item_info == item_info
-            organzied_item_info[:count] = 0
+            organzied_item_info[:count] += 1
             binding.pry
           end
         end
