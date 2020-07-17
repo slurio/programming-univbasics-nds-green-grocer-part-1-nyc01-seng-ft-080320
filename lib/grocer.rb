@@ -27,8 +27,10 @@ def consolidate_cart(cart)
         item_info[:count] = 1
         cons_cart.push(item_info)
       else
-        cons_cart.push("dup")
-        binding.pry
+        cons_cart.each do |organzied_item_info|
+          if organzied_item_info == item_info
+            cons_cart[:count] += 1
+        end
       end
   end
 end
