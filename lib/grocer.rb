@@ -31,6 +31,7 @@ def consolidate_cart(cart)
           if organzied_item_info == item_info
             cons_cart[:count] += 1
             binding.pry
+          end
         end
       end
   end
