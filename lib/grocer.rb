@@ -29,7 +29,6 @@ def consolidate_cart(cart)
       else
         cons_cart.each do |organzied_item_info|
           if organzied_item_info == item_info
-            binding.pry
             organzied_item_info[:count] = 0
             binding.pry
           end
