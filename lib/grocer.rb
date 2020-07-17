@@ -24,7 +24,7 @@ def consolidate_cart(cart)
     item_name = item_info[:item]
       check = find_item_by_name_in_collection(item_name, cons_cart)
       if check.class == NilClass 
-        cons_cart.push(item)
+        cons_cart.push(item_info)
         binding.pry
       else
         cons_cart.push("dup")
