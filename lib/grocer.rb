@@ -26,7 +26,6 @@ def consolidate_cart(cart)
       if check.class == NilClass
         item_info[:count] = 1
         cons_cart.push(item_info)
-        binding.pry
       else
         cons_cart.push("dup")
       end
