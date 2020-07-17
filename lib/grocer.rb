@@ -28,6 +28,7 @@ def consolidate_cart(cart)
         cons_cart.push(item_info)
       else
         cons_cart.push("dup")
+        binding.pry
       end
   end
 end
