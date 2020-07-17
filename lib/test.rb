@@ -1,4 +1,14 @@
-require 'pry'
+
+require "pry"
+
+def items
+	[
+		{"AVOCADO" => {:price => 3.00, :clearance => true}},
+    {"BEETS" => {:price => 2.50, :clearance => false}},
+		{"KALE" => {:price => 3.00, :clearance => false}},
+		{"BEETS" => {:price => 2.50, :clearance => false}}
+	]
+end
 
 def find_item_by_name_in_collection(name, collection)
   item_information = nil
@@ -12,7 +22,6 @@ def find_item_by_name_in_collection(name, collection)
   item_information
 end
 
-
 def consolidate_cart(cart)
   # Consult README for inputs and outputs
   #
@@ -20,14 +29,9 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   cons_cart = []
   index = 0
-  cart.each do |item_info|
-    item_name = item_info[:item]
-      check = find_item_by_name_in_collection(item_name, cons_cart)
-      if check.class == array
-        cons_cart.push(item)
-        binding.pry
-      else
-        cons_cart.push("dup")
-      end
+  cart.each do |item|
+
   end
 end
+
+p find_item_by_name_in_collection("avocado", items)
